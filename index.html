@@ -13,7 +13,7 @@
 
 <body>
   <div class="hero hero-bg is-fullheight">
-    <div class="hero-head">
+    <header class="hero-head">
       <div class="navbar">
         <div class="container">
           <div class="navbar-brand">
@@ -65,15 +65,15 @@
           </div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="hero-body">
+    <section class="hero-body">
       <div class="container has-text-centered">
         <div class="column is-6 is-offset-3">
-          <div class="title has-text-white">We have web accessibility in mind</div>
-          <div class="subtitle has-text-white">
+          <h1 class="title has-text-white">We have web accessibility in mind</h1>
+          <p class="subtitle has-text-white">
             Would you like to get the latest news?
-          </div>
+          </p>
           <div class="box">
             <div class="field is-grouped">
               <p class="control is-expanded">
@@ -86,12 +86,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 
-  <div class="section" id="about">
+  <section class="section" id="about">
     <div class="section-heading has-text-centered">
-      <div class="title is-2">About Us</div>
+      <h2 class="title is-2">About Us</h2>
       <div class="subtitle is-5">We of all trades, master of "some"</div>
       <div class="container">
         <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
@@ -104,9 +104,9 @@
     </div>
 
     <div class="content container">
-      <div class="is-1 title">Hello World</div>
+      <h2 class="is-1 title">Hello World</h2>
       <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
-      <div class="is-2 title">Second level</div>
+      <h2 class="is-2 title">Second level</h2>
       <p>Curabitur accumsan turpis pharetra <b>augue tincidunt</b> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
       <ul>
         <li>- In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
@@ -114,7 +114,7 @@
         <li>- Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
         <li>- Ut non enim metus.</li>
       </ul>
-      <div class="is-3 title">Third level</div>
+      <h3 class="is-3 title">Third level</h3>
       <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a>non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
       <ol class="ol-list">
         <li>Donec blandit a lorem id convallis.</li>
@@ -137,7 +137,7 @@
         <dd>A technology to make HTML look better</dd>
       </dl>
       <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
-      <div class="is-4 title">Fourth level</div>
+      <h4 class="is-4 title">Fourth level</h4>
       <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
       <pre>
           &lt;!DOCTYPE html&gt;
@@ -153,9 +153,10 @@
           </pre>
       <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
       <table>
+        <caption class="visually-hidden">Table decsciption</caption>
         <tr>
-          <td>Header</td>
-          <td>Header</td>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
         </tr>
         <tr>
           <td>cell</td>
@@ -179,7 +180,7 @@
         </tr>
       </table>
       <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
-      <div class="is-5 title">Fifth level</div>
+      <h5 class="is-5 title">Fifth level</h5>
       <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
       <figure>
         <img src="./img/photo-1572958731731-2b7fdb0a9818.jpg">
@@ -189,73 +190,73 @@
           Figure 1: Some beautiful placeholders
         </figcaption>
       </figure>
-      <div class="is-6 title">Sixth level</div>
+      <h6 class="is-6 title">Sixth level</h6>
       <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="hero has-background-grey-light">
+  <section class="hero has-background-grey-light">
     <div class="container features">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Three key features</div>
-        <div class="subtitle is-5">We don't hide what we do</div>
+        <h2 class="title is-2">Three key features</h2>
+        <p class="subtitle is-5">We don't hide what we do</p>
       </div>
 
       <div class="columns">
         <div class="column is-4">
-          <div class="card is-shady">
+          <article class="card is-shady">
             <div class="card-image has-text-centered">
               <i class="fa fa-paw"></i>
             </div>
             <div class="card-content">
               <div class="content">
-                <div>Tristique senectus et netus et.</div>
+                <h3>Tristique senectus et netus et.</h3>
                 <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
                 <p><a>Learn more</a></p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
         <div class="column is-4">
-          <div class="card is-shady">
+          <article class="card is-shady">
             <div class="card-image has-text-centered">
               <i class="fab fa-empire"></i>
             </div>
             <div class="card-content">
               <div class="content">
-                <div>Tempor orci dapibus ultrices in.</div>
+                <h3>Tempor orci dapibus ultrices in.</h3>
                 <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                   sed risus.</p>
                 <p><a>Learn more</a></p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
         <div class="column is-4">
-          <div class="card is-shady">
+          <article class="card is-shady">
             <div class="card-image has-text-centered">
               <i class="fab fa-apple"></i>
             </div>
             <div class="card-content">
               <div class="content">
-                <div> Leo integer malesuada nunc vel risus. </div>
+                <h3> Leo integer malesuada nunc vel risus. </h3>
                 <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
                 <p><a>Learn more</a></p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="hero is-info">
+  <section class="hero is-info">
     <div class="hero-body">
       <div class="container">
-        <div class="title">List of topics</div>
-        <div class="subtitle">We are always in touch we the outside world</div>
+        <h2 class="title">List of topics</h2>
+        <p class="subtitle">We are always in touch we the outside world</p>
       </div>
     </div>
     <div class="tabs is-boxed is-centered main-menu" id="nav">
@@ -280,14 +281,16 @@
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 
   <div class="tab-content container">
-    <div class="tab-pane is-active" id="pane-1" class="level">
+    <section class="tab-pane is-active" id="pane-1" class="level">
+      <h2 class="visually-hidden">Pictures</h2>
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
-            <div class="card">
+            <article class="card">
+              <h3 class="visually-hidden">Title of card</h3>
               <div class="card-image">
                 <div class="image is-4by3">
                   <img src="./img/tab-1.jpg" class="modal-button" data-target="modal-image1">
@@ -295,15 +298,16 @@
               </div>
               <div class="card-content">
                 <div class="content">
-                  <div>Click on image above</div>
+                  <p>Click on image above</p>
                   <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
                   <span class="button is-link modal-button" data-target="modal-image1">Image modal</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
           <div class="column is-4">
-            <div class="card">
+            <article class="card">
+              <h3 class="visually-hidden">Title of card</h3>
               <div class="card-image">
                 <div class="image is-4by3">
                   <img src="./img/tab-2.jpg">
@@ -317,10 +321,11 @@
                   <span class="button is-link modal-button" data-target="modal-card">Modal Card</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
           <div class="column is-4 modal-button" data-target="modal-image">
-            <div class="card">
+            <article class="card">
+              <h3 class="visually-hidden">Title of card</h3>
               <div class="card-image">
                 <div class="image is-4by3">
                   <img src="./img/tab-3.jpg" class="modal-button" data-target="modal-image2">
@@ -328,168 +333,169 @@
               </div>
               <div class="card-content">
                 <div class="content">
-                  <div>Click anywhere on card</div>
+                  <p>Click anywhere on card</p>
                   <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
                   <span class="button is-link modal-button" data-target="modal-image2">Image modal</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="tab-pane" id="pane-3">
+    <section class="tab-pane" id="pane-3">
+      <h2 class="visually-hidden">Team</h2>
       <div class="columns medias">
         <div class="column">
-          <div class="media">
+          <article class="media">
             <div class="media-left">
               <i class="fab fa-github-square fa-4x"></i>
             </div>
             <div class="media-content">
               <div class="content">
+                <h3 class="media-title"><a>Dominic Ipsum</a></h3>
                 <p>
-                  <a><b>Dominic Ipsum</b></a>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
             </div>
-          </div>
-          <div class="media">
+          </article>
+          <article class="media">
             <div class="media-left">
               <i class="fab fa-empire fa-4x"></i>
             </div>
             <div class="media-content">
               <div class="content">
+                <h3 class="media-title"><a>Cassie Ipsum</a></h3>
                 <p>
-                  <a><b>Cassie Ipsum</b></a>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
         <div class="column">
-          <div class="media">
+          <article class="media">
             <div class="media-left">
               <i class="fab fa-ravelry fa-4x"></i>
             </div>
             <div class="media-content">
               <div class="content">
+                <h3 class="media-title"><a>Avery Ipsum</a></h3>
                 <p>
-                  <a><b>Avery Ipsum</b></a>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
             </div>
-          </div>
-          <div class="media">
+          </article>
+          <article class="media">
             <div class="media-left">
               <i class="fab fa-github-alt fa-4x"></i>
             </div>
             <div class="media-content">
               <div class="content">
+                <h3 class="media-title"><a>io Ipsum</a></h3>
                 <p>
-                  <a><b>io Ipsum</b></a>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                 </p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="tab-pane" id="pane-4">
+    <section class="tab-pane" id="pane-4">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
-          <div class="title has-text-centered">Inspired video</div>
+          <h2 class="title has-text-centered">Inspired video</h2>
           <div class="embed-container image">
             <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter">
     <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
-          <div class="title is-2">Upcoming events</div>
+          <h2 class="title is-2">Upcoming events</h2>
           <div class="subtitle is-5">Outcoming dates for the best options</div>
         </div>
 
       <div class="tile is-ancestor">
-        <div class="tile is-parent">
+        <article class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
               <img src="./img/web-access-summit-eventbrite.jpg">
             </div>
-            <p class="title">New York</p>
+            <h3 class="title">New York</h3>
             <p class="subtitle">Fri 27 Nov 2016</p>
             <a class="button">Buy Tickets</a>
           </div>
-        </div>
-        <div class="tile is-parent">
+        </article>
+        <article class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
               <img src="./img/access.jpg">
             </div>
-            <p class="title">Los Angeles</p>
+            <h3 class="title">Los Angeles</h3>
             <p class="subtitle">Fri 27 Nov 2016</p>
             <a class="button">Buy Tickets</a>
           </div>
-        </div>
-        <div class="tile is-parent">
+        </article>
+        <article class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
               <img src="./img/dotcss-2019.jpg">
             </div>
-            <p class="title">Mexico</p>
+            <h3 class="title">Mexico</h3>
             <p class="subtitle">Fri 27 Nov 2016</p>
             <a class="button">Buy Tickets</a>
           </div>
-        </div>
+        </article>
       </div>
 
       <div class="tile is-ancestor">
-        <div class="tile is-parent">
+        <article class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
               <img src="./img/images.jpg">
             </div>
-            <p class="title">Paris</p>
+            <h3 class="title">Paris</h3>
             <p class="subtitle">Fri 27 Nov 2016</p>
             <a class="button">Buy Tickets</a>
           </div>
-        </div>
-        <div class="tile is-parent">
+        </article>
+        <article class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
               <img src="./img/mid_300_33455472_313632022502906_5761920685983137792_n.png">
             </div>
-            <p class="title">Minsk</p>
+            <h3 class="title">Minsk</h3>
             <p class="subtitle">Fri 27 Nov 2016</p>
             <a class="button">Buy Tickets</a>
           </div>
-        </div>
-        <div class="tile is-parent">
+        </article>
+        <article class="tile is-parent">
           <div class="tile is-child box">
             <div class="image">
               <img src="./img/access.jpg">
             </div>
-            <p class="title">London</p>
+            <h3 class="title">London</h3>
             <p class="subtitle">Fri 27 Nov 2016</p>
             <a class="button">Buy Tickets</a>
           </div>
-        </div>
+        </article>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <div class="section-heading has-text-centered">
-      <div class="title is-2">Services</div>
+      <h2 class="title is-2">Services</h2>
       <div class="subtitle is-5">What can I do for you?</div>
     </div>
     <div class="container">
@@ -497,7 +503,7 @@
         <div class="column">
           <a class="box">
             <div class="content">
-              <div class="title is-5">Front End Web Development</div>
+              <h3 class="title is-5">Front End Web Development</h3>
               Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript and
               Vue.js.
             </div>
@@ -506,7 +512,7 @@
         <div class="column">
           <a class="box">
             <div class="content">
-              <div class="title is-5">Back End Web Development</div>
+              <h3 class="title is-5">Back End Web Development</h3>
               Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
             </div>
           </a>
@@ -517,7 +523,7 @@
         <div class="column">
           <a class="box">
             <div class="content">
-              <div class="title is-5">Front End Web Development</div>
+              <h3 class="title is-5">Front End Web Development</h3>
               Develop Front End using latest standards with HTML5/CSS3 with added funtionality using JavaScript and
               Vue.js.
             </div>
@@ -526,27 +532,27 @@
         <div class="column">
           <a class="box">
             <div class="content">
-              <div class="title is-5">Back End Web Development</div>
+              <h3 class="title is-5">Back End Web Development</h3>
               Develop Back End application/service using Node.js or ASP .NET and SQL server or Mongo DB databases.
             </div>
           </a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Photos from past events</div>
+        <h2 class="title is-2">Photos from past events</h2>
       </div>
 
       <div class="container portfolio-container">
         <div class="columns">
           <div class="column is-4">
-            <div class="card">
+            <article class="card">
               <div class="card-header">
-                <p class="card-header-title">
+                <h3 class="card-header-title">
                   <span>Admin <small>(Light)</small></span>
                   <span class="is-pulled-right">
                     <a>
@@ -555,7 +561,7 @@
                     <span class="tag is-default">Desktop</span>
                     <span class="tag is-danger">WIP</span>
                   </span>
-                </p>
+                </h3>
               </div>
               <div class="card-content">
                 <div class="image">
@@ -566,12 +572,12 @@
                 <a class="card-footer-item">Preview</a>
                 <a class="card-footer-item">Source Code</a>
               </div>
-            </div>
+            </article>
           </div>
           <div class="column is-4">
-            <div class="card">
+            <article class="card">
               <div class="card-header">
-                <p class="card-header-title">
+                <h3 class="card-header-title">
                   <span>Cards</span>
                   <span class="is-pulled-right">
                     <a>
@@ -580,7 +586,7 @@
                     <span class="tag is-default">Desktop</span>
                     <span class="tag is-default">?</span>
                   </span>
-                </p>
+                </h3>
               </div>
               <div class="card-content">
                 <div class="image">
@@ -591,12 +597,12 @@
                 <a class="card-footer-item">Preview</a>
                 <a class="card-footer-item">Source Code</a>
                 </div>
-            </div>
+            </article>
           </div>
           <div class="column is-4">
-            <div class="card">
+            <article class="card">
               <div class="card-header">
-                <p class="card-header-title">
+                <h3 class="card-header-title">
                   <span>Forum</span>
                   <span class="is-pulled-right">
                     <a>
@@ -605,7 +611,7 @@
                     <span class="tag is-default">Desktop</span>
                     <span class="tag is-default">Mobile</span>
                   </span>
-                </p>
+                </h3>
               </div>
               <div class="card-content">
                 <div class="image">
@@ -616,14 +622,14 @@
                 <a class="card-footer-item">Preview</a>
                 <a class="card-footer-item">Source Code</a>
               </div>
-            </div>
+            </article>
           </div>
         </div>
         <div class="columns">
           <div class="column is-4">
-            <div class="card">
+            <article class="card">
               <div class="card-header">
-                <p class="card-header-title">
+                <h3 class="card-header-title">
                   <span>InstaAlbum</span>
                   <span class="is-pulled-right">
                     <a>
@@ -632,7 +638,7 @@
                     <span class="tag is-default">Desktop</span>
                     <span class="tag is-default">Mobile</span>
                   </span>
-                </p>
+                </h3>
               </div>
               <div class="card-content">
                 <div class="image">
@@ -643,12 +649,12 @@
                 <a class="card-footer-item">Preview</a>
                 <a class="card-footer-item">Source Code</a>
               </div>
-            </div>
+            </article>
           </div>
           <div class="column is-4">
-            <div class="card">
+            <article class="card">
               <div class="card-header">
-                <p class="card-header-title">
+                <h3 class="card-header-title">
                   <span>Landing</span>
                   <span class="is-pulled-right">
                     <a>
@@ -657,7 +663,7 @@
                     <span class="tag is-default">Desktop</span>
                     <span class="tag is-default">Mobile</span>
                   </span>
-                </p>
+                </h3>
               </div>
               <div class="card-content">
                 <div class="image">
@@ -668,12 +674,12 @@
                 <a class="card-footer-item">Preview</a>
                 <a class="card-footer-item">Source Code</a>
               </div>
-            </div>
+            </article>
           </div>
           <div class="column is-4">
-            <div class="card">
+            <article class="card">
               <div class="card-header">
-                <p class="card-header-title">
+                <h3 class="card-header-title">
                   <span>Marketing</span>
                   <span class="is-pulled-right">
                     <a>
@@ -682,7 +688,7 @@
                     <span class="tag is-default">Desktop</span>
                     <span class="tag is-default">Mobile</span>
                   </span>
-                </p>
+                </h3>
               </div>
               <div class="card-content">
                 <div class="image">
@@ -693,18 +699,18 @@
                 <a class="card-footer-item">Preview</a>
                 <a class="card-footer-item">Source Code</a>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
     </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Forum</div>
+        <h2 class="title is-2">Forum</h2>
         <div class="subtitle is-5">Discuss any topic with no leaving this page</div>
       </div>
 
@@ -725,8 +731,8 @@
         </div>
         <div class="column is-9">
           <div class="box content">
-            <div class="post">
-              <h4>How do you center a button in a box?</h4>
+            <article class="post">
+              <h3>How do you center a button in a box?</h3>
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
@@ -745,10 +751,10 @@
                   <span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="post">
-              <h4>How can I make a button go full width?</h4>
+            <article class="post">
+              <h3>How can I make a button go full width?</h3>
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
@@ -767,10 +773,10 @@
                   <span class="has-text-grey-light"><i class="fa fa-comments"></i> 0</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="post">
-              <h4>TypeError: Data must be a string or a buffer when trying touse tabs</h4>
+            <article class="post">
+              <h3>TypeError: Data must be a string or a buffer when trying touse tabs</h3>
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
@@ -789,10 +795,10 @@
                   <span class="has-text-grey-light"><i class="fa fa-comments"></i> 13</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="post">
-              <h4>How to vertically center elements?</h4>
+            <article class="post">
+              <h3>How to vertically center elements?</h3>
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
@@ -811,10 +817,10 @@
                   <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="post">
-              <h4>I'm trying to use hamburger menu on css, but it doesn't work. What is wrong?</h4>
+            <article class="post">
+              <h3>I'm trying to use hamburger menu on css, but it doesn't work. What is wrong?</h3>
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
@@ -833,10 +839,10 @@
                   <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="post">
-              <h4>How to make tiles wrap with CSS?</h4>
+            <article class="post">
+              <h3>How to make tiles wrap with CSS?</h3>
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
@@ -855,17 +861,17 @@
                   <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section has-background-light">
+  <section class="section has-background-light">
     <div class="container">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Contact us</div>
+        <h2 class="title is-2">Contact us</h2>
         <div class="subtitle is-5">Don't hesitate, ask anything</div>
       </div>
 
@@ -956,7 +962,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </section>
 
   <!-- <div class="section">
     <div class="container">
@@ -1067,11 +1073,11 @@
     </div>
   </div> -->
 
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-2">
-          <div class="is-3 title"><b>Lessons</b></div>
+          <h2 class="is-3 title"><b>Lessons</b></h2>
           <ul>
             <li><a>Lorem ipsum dolor sit amet</a></li>
             <li><a>Vestibulum errato isse</a></li>
@@ -1083,7 +1089,7 @@
           </ul>
         </div>
         <div class="column is-3">
-          <div class="is-3 title"><b>News</b></div>
+          <h2 class="is-3 title"><b>News</b></h2>
           <ul>
             <li><a>Labore et dolore magna aliqua</a></li>
             <li><a>Kanban airis sum eschelor</a></li>
@@ -1095,7 +1101,7 @@
           </ul>
         </div>
         <div class="column is-4">
-          <div class="is-3 title"><b>Help</b></div>
+          <h2 class="is-3 title"><b>Help</b></h2>
           <ul>
             <li><a>Objects in space</a></li>
             <li><a>Playing cards with coyote</a></li>
@@ -1116,9 +1122,9 @@
         <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <div id="modal-card" class="modal modal-fx-3dSlit">
+  <article id="modal-card" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
       <div class="card">
@@ -1135,7 +1141,7 @@
               </div>
             </div>
             <div class="media-content">
-              <div class="title is-4">Jane Doe</div>
+              <h2 class="title is-4">Jane Doe</h2>
               <div class="subtitle is-6">@jane_doe</div>
             </div>
           </div>
@@ -1154,23 +1160,25 @@
       </div>
     </div>
     <button class="modal-close is-large"></button>
-  </div>
+  </article>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <article id="modal-image1" class="modal modal-fx-3dSlit">
+    <h2 class="visually-hidden">Image modal block type1</h2>
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1">
     </div>
     <button class="modal-close is-large"></button>
-  </div>
+  </article>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <article id="modal-image2" class="modal modal-fx-superScaled">
+    <h2 class="visually-hidden">Image modal block type2</h2>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3">
     </div>
     <button class="modal-close is-large"></button>
-  </div>
+  </article>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script async src="js/custom.js"></script>
