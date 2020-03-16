@@ -77,10 +77,13 @@
           <div class="box">
             <div class="field is-grouped">
               <p class="control is-expanded">
-                <input class="input">
+                <label>
+                  <span class="visually-hidden">If you want to get latest news, please input here your email and after than press "Notify Me" button</span>
+                  <input class="input">
+                </label>
               </p>
               <p class="control">
-                <a class="button is-info">Notify Me</a>
+                <button class="button is-info">Notify Me</button>
               </p>
             </div>
           </div>
@@ -262,22 +265,22 @@
     <div class="tabs is-boxed is-centered main-menu" id="nav">
       <ul>
         <li data-target="pane-1" id="1" class="is-active">
-          <a>
+          <button>
             <span class="icon is-small"><i class="fa fa-image"></i></span>
             <span>Pictures</span>
-          </a>
+          </button>
         </li>
         <li data-target="pane-3" id="3">
-          <a>
+          <button>
             <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
             <span>Team</span>
-          </a>
+          </button>
         </li>
         <li data-target="pane-4" id="4">
-          <a>
+          <button>
             <span class="icon is-small"><i class="fa fa-film"></i></span>
             <span>Video</span>
-          </a>
+          </button> 
         </li>
       </ul>
     </div>
@@ -876,16 +879,16 @@
 
       <form class="column is-half is-offset-one-quarter box">
         <div class="field">
-          <label class="label">Name</label>
+          <label class="label" for="contact-us-name">Name</label>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input class="input" id="contact-us-name" type="text" placeholder="Text input">
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Username</label>
+          <label class="label" for="contact-us-username">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text">
+            <input class="input is-success" id="contact-us-username" type="text">
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -897,9 +900,9 @@
         </div>
 
         <div class="field">
-          <label class="label">Email</label>
+          <label class="label" for="contact-us-email">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+            <input class="input is-danger" id="contact-us-email" type="email" placeholder="Email input" value="hello@" >
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -911,10 +914,10 @@
         </div>
 
         <div class="field">
-          <label class="label">Subject</label>
+          <label class="label" for="contact-us-subject">Subject</label>
           <div class="control">
             <div class="select">
-              <select>
+              <select id="contact-us-subject">
                 <option>Select dropdown</option>
                 <option>With options</option>
               </select>
@@ -923,15 +926,16 @@
         </div>
 
         <div class="field">
-          <label class="label">Message</label>
+          <label class="label" for="contact-us-message">Message</label>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea" id="contact-us-message" placeholder="Textarea"></textarea>
           </div>
         </div>
 
         <div class="field">
           <div class="control">
             <label class="checkbox">
+              <span class="visually-hidden">Please check this checkbox if you agree to the terms and conditions. You can find terms and conditions link right after the checkbox.</span>
               <input type="checkbox">
               I agree to the <a>terms and conditions</a>
             </label>
@@ -939,16 +943,21 @@
         </div>
 
         <div class="field">
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="question">
-              Yes
-            </label>
-            <label class="radio">
-              <input type="radio" name="question">
-              No
-            </label>
-          </div>
+          <fieldset class="visually-not-marked-fieldset">
+            <legend class="visually-hidden">Choose your answer on the question</legend>
+              <div class="control">
+                <label class="radio">
+                  <span class="visually-hidden">This is some of radio button for question</span>
+                  <input type="radio" name="question">
+                  Yes
+                </label>
+                <label class="radio">
+                  <span class="visually-hidden">This is some of radio button for question</span>
+                  <input type="radio" name="question">
+                  No
+                </label>
+              </div>
+            </fieldset>
         </div>
 
         <div class="field is-grouped">
@@ -1158,7 +1167,10 @@
         </div>
       </div>
     </div>
-    <button class="modal-close is-large"></button>
+
+    <button class="modal-close is-large">
+      <span class="visually-hidden">Close modal</span>
+    </button>
   </article>
 
   <article id="modal-image1" class="modal modal-fx-3dSlit">
@@ -1167,7 +1179,9 @@
     <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1" alt="Typewriter">
     </div>
-    <button class="modal-close is-large"></button>
+    <button class="modal-close is-large">
+      <span class="visually-hidden">Close modal</span>
+    </button>
   </article>
 
   <article id="modal-image2" class="modal modal-fx-superScaled">
@@ -1176,7 +1190,9 @@
     <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3" alt="At the entrance to the sand cave">
     </div>
-    <button class="modal-close is-large"></button>
+    <button class="modal-close is-large">
+      <span class="visually-hidden">Close modal</span>
+    </button>
   </article>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>

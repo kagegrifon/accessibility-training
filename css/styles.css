@@ -199,3 +199,60 @@ li {
   line-height: 1.5;
   font-size: bold;
 }
+
+a:hover {
+  outline: none;
+  color: #3273dc;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000;
+}
+
+.hero.is-info .tabs.is-boxed button {
+  margin-bottom: -1px;
+  padding: .5em 1em;
+  border: none;
+  background-color: transparent;
+  
+  color: inherit;
+  font-size: inherit;
+
+  cursor: pointer;
+}
+
+.hero.is-info .tabs.is-boxed button:hover,
+.hero.is-info .tabs.is-boxed button:focus {
+  background-color: rgba(10,10,10,.1);
+  box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000;
+
+  opacity: 1;
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000;
+  color: inherit;
+}
+
+.hero-body .button.is-info {
+  color: #2e2d2d;
+}
+
+input:hover, input:focus,
+.input:hover, .input:focus,
+.select select.is-active, .select select.is-focused, .select select:active, .select select:focus,
+.input.is-active, .input.is-focused, .input:active, .input:focus, .textarea.is-active, .textarea.is-focused, .textarea:active, .textarea:focus {
+  box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000;
+  outline: none;
+}
+
+.input.is-danger:hover, .input.is-danger:focus {
+  box-shadow: 0 0 3px 3px rgba(255,56,96, .7);
+}
+
+.input.is-success:hover, .input.is-success:focus {
+  box-shadow: 0 0 3px 3px rgba(35,209,96, .7);
+}
+
+.visually-not-marked-fieldset {
+  border: none;
+}
