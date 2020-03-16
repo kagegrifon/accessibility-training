@@ -256,3 +256,43 @@ input:hover, input:focus,
 .visually-not-marked-fieldset {
   border: none;
 }
+
+.subtitle {
+  color: #3e3d3d;
+}
+
+.hero.is-info .title,
+.hero.is-info .subtitle,
+.hero.is-info .tabs {
+  color: #160f78;
+}
+
+.forum-section .tag.is-primary,
+.forum-section .tag.is-success,
+.forum-section .tag.is-light {
+  color: #000;
+}
+
+.forum-section .tag.is-dark {
+  color: #fff;
+}
+
+.forum-section .media-right .has-text-grey-light {
+  color: #94001E !important;
+}
+
+.footer a {
+  color: #2a62be;
+}
+
+.portfolio-container .tag.is-danger {
+  color: #340a0a;
+}
+
+.help.is-success {
+  color: #0D5426;
+}
+
+.help.is-danger {
+  color: #AD0023;
+}
