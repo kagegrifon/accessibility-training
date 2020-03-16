@@ -220,15 +220,18 @@ a:hover {
 }
 
 .hero.is-info .tabs.is-boxed button:hover,
-.hero.is-info .tabs.is-boxed button:focus {
+.hero.is-info .tabs.is-boxed button:focus, {
   background-color: rgba(10,10,10,.1);
   box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000;
 
   opacity: 1;
 }
 
-.button:hover,
-.button:focus {
+.button:hover, .button:focus,
+.button.is-focused:not(:active), .button:focus:not(:active),
+.button.is-info:hover, .button.is-info:focus,
+.button.is-info.is-focused:not(:active), .button.is-info:focus:not(:active),
+.button.is-link.is-focused:not(:active), .button.is-link:focus:not(:active) {
   box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000;
   color: inherit;
 }
