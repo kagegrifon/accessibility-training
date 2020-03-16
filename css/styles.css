@@ -296,3 +296,7 @@ input:hover, input:focus,
 .help.is-danger {
   color: #AD0023;
 }
+
+.embed-container.image iframe {
+  border: none;
+}
