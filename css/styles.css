@@ -220,7 +220,7 @@ a:hover {
 }
 
 .hero.is-info .tabs.is-boxed button:hover,
-.hero.is-info .tabs.is-boxed button:focus, {
+.hero.is-info .tabs.is-boxed button:focus {
   background-color: rgba(10,10,10,.1);
   box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000;
 
@@ -240,6 +240,8 @@ a:hover {
   color: #2e2d2d;
 }
 
+.footer a:hover, .footer a:focus, 
+a.box:focus, a.box:hover,
 input:hover, input:focus,
 .input:hover, .input:focus,
 .select select.is-active, .select select.is-focused, .select select:active, .select select:focus,
