@@ -200,7 +200,8 @@ li {
   font-size: bold;
 }
 
-a:hover {
+a:hover,
+a:focus {
   outline: none;
   color: #3273dc;
   border-radius: 2px;
@@ -230,10 +231,14 @@ a:hover {
 .button:hover, .button:focus,
 .button.is-focused:not(:active), .button:focus:not(:active),
 .button.is-info:hover, .button.is-info:focus,
+.button.is-primary.is-focused:not(:active), .button.is-primary:focus:not(:active),
+.button.is-danger.is-focused:not(:active), .button.is-danger:focus:not(:active),
 .button.is-info.is-focused:not(:active), .button.is-info:focus:not(:active),
 .button.is-link.is-focused:not(:active), .button.is-link:focus:not(:active) {
   box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000;
   color: inherit;
+
+  outline: none;
 }
 
 .hero-body .button.is-info {
@@ -304,4 +309,15 @@ input:hover, input:focus,
 
 .embed-container.image iframe {
   border: none;
+}
+
+.external-link-symbol {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/external-link.svg);
 }
