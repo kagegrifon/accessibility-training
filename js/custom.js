@@ -68,3 +68,31 @@ function toggleTab(selectedNav, targetId) {
 
   buttonMenuToggler.addEventListener('click', buttonOnClick);
 })();
+
+
+(function reminder () {
+  var container = document.getElementById('notification');
+
+  var startNotify = function notify() {
+    setTimeout(function() {
+      showNotification();
+      notify();
+    }, 30 * 1000);
+  };
+
+  function showNotification() {
+    container.classList.add('notification-shown');
+    container.setAttribute('aria-live', 'polite');
+
+    setTimeout(function() {
+      hideNotification();
+    }, 10 * 1000);
+  }
+
+  function hideNotification() {
+    container.classList.remove('notification-shown');
+    container.setAttribute('aria-live', 'off');
+  }
+
+  startNotify();
+})();
