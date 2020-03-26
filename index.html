@@ -940,14 +940,28 @@
         <div class="field">
           <label class="label" for="contact-us-name">Name</label>
           <div class="control">
-            <input class="input" id="contact-us-name" type="text" placeholder="Text input">
+            <input
+              class="input"
+              id="contact-us-name"
+              type="text"
+              placeholder="Text input"
+              aria-placeholder="Enter your name"
+              aria-invalid="false" 
+            >
           </div>
         </div>
 
         <div class="field">
           <label class="label" for="contact-us-username">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" id="contact-us-username" type="text">
+            <input
+              class="input is-success"
+              id="contact-us-username"
+              type="text"
+              aria-placeholder="Enter your username"
+              aria-required="true"
+              aria-invalid="false"
+            >
             <span class="icon is-small is-left">
               <span class="fas fa-user"></span>
             </span>
@@ -961,7 +975,16 @@
         <div class="field">
           <label class="label" for="contact-us-email">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" id="contact-us-email" type="email" placeholder="Email input" value="hello@" >
+            <input
+              class="input is-danger"
+              id="contact-us-email"
+              type="email"
+              placeholder="Email input"
+              value="hello@"
+              aria-placeholder="Enter your email"
+              aria-required="true"
+              aria-invalid="false"
+            >
             <span class="icon is-small is-left">
               <span class="fas fa-envelope"></span>
             </span>
@@ -987,7 +1010,7 @@
         <div class="field">
           <label class="label" for="contact-us-message">Message</label>
           <div class="control">
-            <textarea class="textarea" id="contact-us-message" placeholder="Textarea"></textarea>
+            <textarea class="textarea" id="contact-us-message" placeholder="Textarea" aria-placeholder="Enter your message"></textarea>
           </div>
         </div>
 
