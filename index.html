@@ -133,7 +133,7 @@
           <p class="subtitle has-text-white">
             Would you like to get the latest news?
           </p>
-          <div class="box">
+          <form class="box">
             <div class="field is-grouped">
               <p class="control is-expanded">
                 <label>
@@ -145,7 +145,7 @@
                 <button class="button is-info">Notify Me</button>
               </p>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -322,21 +322,21 @@
       </div>
     </div>
     <div class="tabs is-boxed is-centered main-menu" id="nav">
-      <ul>
+      <ul role="tablist">
         <li data-target="pane-1" id="1" class="is-active">
-          <button>
+          <button role="tab">
             <span class="icon is-small"><span class="fa fa-image"></span></span>
             <span>Pictures</span>
           </button>
         </li>
         <li data-target="pane-3" id="3">
-          <button>
+          <button role="tab">
             <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
             <span>Team</span>
           </button>
         </li>
         <li data-target="pane-4" id="4">
-          <button>
+          <button role="tab">
             <span class="icon is-small"><span class="fa fa-film"></span></span>
             <span>Video</span>
           </button> 
@@ -346,7 +346,7 @@
   </section>
 
   <div class="tab-content container">
-    <section class="tab-pane is-active level" id="pane-1">
+    <section class="tab-pane is-active level" id="pane-1" role="tab-panel">
       <h2 id="#heading-2-item-6" class="visually-hidden">Pictures</h2>
       <div class="container">
         <div class="columns features">
@@ -406,7 +406,7 @@
       </div>
     </section>
 
-    <section class="tab-pane" id="pane-3">
+    <section class="tab-pane" id="pane-3" role="tab-panel">
       <h2 id="#heading-2-item-7" class="visually-hidden">Team</h2>
       <div class="columns medias">
         <div class="column">
@@ -468,7 +468,7 @@
       </div>
     </section>
 
-    <section class="tab-pane" id="pane-4">
+    <section class="tab-pane" id="pane-4" role="tab-panel">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <h2 id="#heading-2-item-8" class="title has-text-centered">Inspired video</h2>
@@ -560,9 +560,9 @@
       <h2 id="#heading-2-item-10" class="title is-2">Services</h2>
       <div class="subtitle is-5">What can I do for you?</div>
     </div>
-    <div class="container">
+    <div class="container" role="list">
       <div class="columns">
-        <div class="column">
+        <div class="column" role="listitem">
           <a class="box" tabindex="0">
             <div class="content">
               <h3 class="title is-5">Front End Web Development</h3>
@@ -571,7 +571,7 @@
             </div>
           </a>
         </div>
-        <div class="column">
+        <div class="column" role="listitem">
           <a class="box" tabindex="0">
             <div class="content">
               <h3 class="title is-5">Back End Web Development</h3>
@@ -582,7 +582,7 @@
       </div>
 
       <div class="columns">
-        <div class="column">
+        <div class="column" role="listitem">
           <a class="box" tabindex="0">
             <div class="content">
               <h3 class="title is-5">Front End Web Development</h3>
@@ -591,7 +591,7 @@
             </div>
           </a>
         </div>
-        <div class="column">
+        <div class="column" role="listitem">
           <a class="box" tabindex="0">
             <div class="content">
               <h3 class="title is-5">Back End Web Development</h3>
@@ -1191,7 +1191,7 @@
     </div>
   </footer>
 
-  <article id="modal-card" class="modal modal-fx-3dSlit" aria-label="Modal card">
+  <article id="modal-card" class="modal modal-fx-3dSlit" aria-label="Modal card" aria-modal="true">
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
       <div class="card">
@@ -1232,7 +1232,7 @@
     </button>
   </article>
 
-  <article id="modal-image1" class="modal modal-fx-3dSlit" aria-label="Modal image type1">
+  <article id="modal-image1" class="modal modal-fx-3dSlit" aria-label="Modal image type1" aria-modal="true">
     <h2 class="visually-hidden">Image modal block type1</h2>
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
@@ -1243,7 +1243,7 @@
     </button>
   </article>
 
-  <article id="modal-image2" class="modal modal-fx-superScaled" aria-label="Modal image type2">
+  <article id="modal-image2" class="modal modal-fx-superScaled" aria-label="Modal image type2" aria-modal="true">
     <h2 class="visually-hidden">Image modal block type2</h2>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
