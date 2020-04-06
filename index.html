@@ -126,14 +126,14 @@
       </div>
     </header>
 
-    <section class="hero-body" id="first-content-block">
+    <section class="hero-body" id="first-content-block" aria-labelledby="heading-1-item-1">
       <div class="container has-text-centered">
         <div class="column is-6 is-offset-3">
           <h1 class="title has-text-white" id="#heading-1-item-1">We have web accessibility in mind</h1>
           <p class="subtitle has-text-white">
             Would you like to get the latest news?
           </p>
-          <div class="box">
+          <form class="box">
             <div class="field is-grouped">
               <p class="control is-expanded">
                 <label>
@@ -145,13 +145,13 @@
                 <button class="button is-info">Notify Me</button>
               </p>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
   </div>
 
-  <section class="section" id="about">
+  <section class="section" id="about" aria-labelledby="#heading-2-item-1">
     <div class="section-heading has-text-centered">
       <h2 class="title is-2" id="#heading-2-item-1">About Us</h2>
       <div class="subtitle is-5">We of all trades, master of "some"</div>
@@ -257,7 +257,7 @@
     </div>
   </section>
 
-  <section class="hero has-background-grey-light">
+  <section class="hero has-background-grey-light" aria-labelledby="heading-2-item-4">
     <div class="container features">
       <div class="section-heading has-text-centered">
         <h2 id="#heading-2-item-4" class="title is-2">Three key features</h2>
@@ -314,7 +314,7 @@
     </div>
   </section>
 
-  <section class="hero is-info">
+  <section class="hero is-info" aria-labelledby="heading-2-item-5">
     <div class="hero-body">
       <div class="container">
         <h2 id="#heading-2-item-5" class="title">List of topics</h2>
@@ -322,21 +322,21 @@
       </div>
     </div>
     <div class="tabs is-boxed is-centered main-menu" id="nav">
-      <ul>
+      <ul role="tablist">
         <li data-target="pane-1" id="1" class="is-active">
-          <button>
+          <button role="tab">
             <span class="icon is-small"><span class="fa fa-image"></span></span>
             <span>Pictures</span>
           </button>
         </li>
         <li data-target="pane-3" id="3">
-          <button>
+          <button role="tab">
             <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
             <span>Team</span>
           </button>
         </li>
         <li data-target="pane-4" id="4">
-          <button>
+          <button role="tab">
             <span class="icon is-small"><span class="fa fa-film"></span></span>
             <span>Video</span>
           </button> 
@@ -346,7 +346,7 @@
   </section>
 
   <div class="tab-content container">
-    <section class="tab-pane is-active level" id="pane-1">
+    <section class="tab-pane is-active level" id="pane-1" role="tab-panel" aria-labelledby="heading-2-item-6">
       <h2 id="#heading-2-item-6" class="visually-hidden">Pictures</h2>
       <div class="container">
         <div class="columns features">
@@ -362,7 +362,7 @@
                 <div class="content">
                   <p>Click on image above</p>
                   <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                  <button class="button is-link modal-button" data-target="modal-image1">Image modal</button>
+                  <button class="button is-link modal-button" data-target="modal-image1" aria-haspopup="true">Image modal</button>
                 </div>
               </div>
             </article>
@@ -380,7 +380,7 @@
                   <div>Tempor orci dapibus ultrices in.</div>
                   <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                     sed risus.</p>
-                  <button class="button is-link modal-button" data-target="modal-card">Modal Card</button>
+                  <button class="button is-link modal-button" data-target="modal-card" aria-haspopup="true">Modal Card</button>
                 </div>
               </div>
             </article>
@@ -397,7 +397,7 @@
                 <div class="content">
                   <p>Click anywhere on card</p>
                   <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                  <button class="button is-link modal-button" data-target="modal-image2">Image modal</button>
+                  <button class="button is-link modal-button" data-target="modal-image2" aria-haspopup="true">Image modal</button>
                 </div>
               </div>
             </article>
@@ -406,7 +406,7 @@
       </div>
     </section>
 
-    <section class="tab-pane" id="pane-3">
+    <section class="tab-pane" id="pane-3" role="tab-panel" aria-labelledby="heading-2-item-7">
       <h2 id="#heading-2-item-7" class="visually-hidden">Team</h2>
       <div class="columns medias">
         <div class="column">
@@ -468,7 +468,7 @@
       </div>
     </section>
 
-    <section class="tab-pane" id="pane-4">
+    <section class="tab-pane" id="pane-4" role="tab-panel" aria-labelledby="heading-2-item-8">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <h2 id="#heading-2-item-8" class="title has-text-centered">Inspired video</h2>
@@ -480,7 +480,7 @@
     </section>
   </div>
 
-  <section class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter" aria-labelledby="heading-2-item-9">
     <div class="container has-text-centered">
         <div class="section-heading has-text-centered">
           <h2 id="#heading-2-item-9" class="title is-2">Upcoming events</h2>
@@ -555,14 +555,14 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" aria-labelledby="heading-2-item-10">
     <div class="section-heading has-text-centered">
       <h2 id="#heading-2-item-10" class="title is-2">Services</h2>
       <div class="subtitle is-5">What can I do for you?</div>
     </div>
-    <div class="container">
+    <div class="container" role="list">
       <div class="columns">
-        <div class="column">
+        <div class="column" role="listitem">
           <a class="box" tabindex="0">
             <div class="content">
               <h3 class="title is-5">Front End Web Development</h3>
@@ -571,7 +571,7 @@
             </div>
           </a>
         </div>
-        <div class="column">
+        <div class="column" role="listitem">
           <a class="box" tabindex="0">
             <div class="content">
               <h3 class="title is-5">Back End Web Development</h3>
@@ -582,7 +582,7 @@
       </div>
 
       <div class="columns">
-        <div class="column">
+        <div class="column" role="listitem">
           <a class="box" tabindex="0">
             <div class="content">
               <h3 class="title is-5">Front End Web Development</h3>
@@ -591,7 +591,7 @@
             </div>
           </a>
         </div>
-        <div class="column">
+        <div class="column" role="listitem">
           <a class="box" tabindex="0">
             <div class="content">
               <h3 class="title is-5">Back End Web Development</h3>
@@ -603,7 +603,7 @@
     </div>
   </section>
 
-  <section class="section has-background-grey-lighter">
+  <section class="section has-background-grey-lighter" aria-labelledby="heading-2-item-11">
     <div class="container">
       <div class="section-heading has-text-centered">
         <h2 id="#heading-2-item-11" class="title is-2">Photos from past events</h2>
@@ -768,7 +768,7 @@
     </div>
   </section>
 
-  <section class="section forum-section">
+  <section class="section forum-section" aria-labelledby="heading-2-item-12">
     <div class="container">
       <div class="section-heading has-text-centered">
         <h2 id="#heading-2-item-12" class="title is-2">Forum</h2>
@@ -797,7 +797,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=300" alt="Post image">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=300" alt="Post image" aria-hidden="true">
                   </p>
                 </div>
                 <div class="media-content">
@@ -819,7 +819,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=301" alt="Post image">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=301" alt="Post image" aria-hidden="true">
                   </p>
                 </div>
                 <div class="media-content">
@@ -841,7 +841,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=302" alt="Post image">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=302" alt="Post image" aria-hidden="true">
                   </p>
                 </div>
                 <div class="media-content">
@@ -863,7 +863,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=303" alt="Post image">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=303" alt="Post image" aria-hidden="true">
                   </p>
                 </div>
                 <div class="media-content">
@@ -885,7 +885,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=304" alt="Post image">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=304" alt="Post image" aria-hidden="true">
                   </p>
                 </div>
                 <div class="media-content">
@@ -907,7 +907,7 @@
               <div class="media">
                 <div class="media-left">
                   <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=305" alt="Post image">
+                    <img src="https://source.unsplash.com/random/64x64/?sig=305" alt="Post image" aria-hidden="true">
                   </p>
                 </div>
                 <div class="media-content">
@@ -929,7 +929,7 @@
     </div>
   </section>
 
-  <section class="section has-background-light">
+  <section class="section has-background-light" aria-labelledby="heading-2-item-13">
     <div class="container">
       <div class="section-heading has-text-centered">
         <h2 id="#heading-2-item-13" class="title is-2">Contact us</h2>
@@ -940,14 +940,28 @@
         <div class="field">
           <label class="label" for="contact-us-name">Name</label>
           <div class="control">
-            <input class="input" id="contact-us-name" type="text" placeholder="Text input">
+            <input
+              class="input"
+              id="contact-us-name"
+              type="text"
+              placeholder="Text input"
+              aria-placeholder="Enter your name"
+              aria-invalid="false" 
+            >
           </div>
         </div>
 
         <div class="field">
           <label class="label" for="contact-us-username">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" id="contact-us-username" type="text">
+            <input
+              class="input is-success"
+              id="contact-us-username"
+              type="text"
+              aria-placeholder="Enter your username"
+              aria-required="true"
+              aria-invalid="false"
+            >
             <span class="icon is-small is-left">
               <span class="fas fa-user"></span>
             </span>
@@ -961,7 +975,16 @@
         <div class="field">
           <label class="label" for="contact-us-email">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" id="contact-us-email" type="email" placeholder="Email input" value="hello@" >
+            <input
+              class="input is-danger"
+              id="contact-us-email"
+              type="email"
+              placeholder="Email input"
+              value="hello@"
+              aria-placeholder="Enter your email"
+              aria-required="true"
+              aria-invalid="false"
+            >
             <span class="icon is-small is-left">
               <span class="fas fa-envelope"></span>
             </span>
@@ -987,7 +1010,7 @@
         <div class="field">
           <label class="label" for="contact-us-message">Message</label>
           <div class="control">
-            <textarea class="textarea" id="contact-us-message" placeholder="Textarea"></textarea>
+            <textarea class="textarea" id="contact-us-message" placeholder="Textarea" aria-placeholder="Enter your message"></textarea>
           </div>
         </div>
 
@@ -1180,18 +1203,18 @@
       </div>
 
       <div class="content has-text-centered">
-        <div class="soc">
-          <a tabindex="0"><span class="fab fa-github-alt fa-2x"></span></a>
-          <a tabindex="0"><span class="fab fa-youtube fa-2x"></span></a>
-          <a tabindex="0"><span class="fab fa-facebook fa-2x"></span></a>
-          <a tabindex="0"><span class="fab fa-twitter fa-2x"></span></a>
+        <div class="soc" role="list">
+          <a tabindex="0" role="listitem" aria-label="Link to somewhere"><span class="fab fa-github-alt fa-2x"></span></a>
+          <a tabindex="0" role="listitem" aria-label="Link to youtube"><span class="fab fa-youtube fa-2x"></span></a>
+          <a tabindex="0" role="listitem" aria-label="Link to facebook"><span class="fab fa-facebook fa-2x"></span></a>
+          <a tabindex="0" role="listitem" aria-label="Link to twitter"><span class="fab fa-twitter fa-2x"></span></a>
         </div>
         <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" tabindex="0">MIT</a>.</p>
       </div>
     </div>
   </footer>
 
-  <article id="modal-card" class="modal modal-fx-3dSlit" aria-label="Modal card">
+  <article id="modal-card" class="modal modal-fx-3dSlit" aria-label="Modal card" aria-modal="true">
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
       <div class="card">
@@ -1232,7 +1255,7 @@
     </button>
   </article>
 
-  <article id="modal-image1" class="modal modal-fx-3dSlit" aria-label="Modal image type1">
+  <article id="modal-image1" class="modal modal-fx-3dSlit" aria-label="Modal image type1" aria-modal="true">
     <h2 class="visually-hidden">Image modal block type1</h2>
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
@@ -1243,7 +1266,7 @@
     </button>
   </article>
 
-  <article id="modal-image2" class="modal modal-fx-superScaled" aria-label="Modal image type2">
+  <article id="modal-image2" class="modal modal-fx-superScaled" aria-label="Modal image type2" aria-modal="true">
     <h2 class="visually-hidden">Image modal block type2</h2>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
@@ -1252,6 +1275,10 @@
     <button class="modal-close is-large">
       <span class="visually-hidden">Close modal</span>
     </button>
+  </article>
+
+  <article id="notification" role="note" class="notification" aria-atomic="true" aria-live="off">
+    <h2>Don't forget to fill contact form</h2>
   </article>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>

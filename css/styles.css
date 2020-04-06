@@ -413,3 +413,24 @@ input:hover, input:focus,
   white-space: nowrap;
   text-decoration: none;
 }
+
+
+.notification {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: opacity 0.5s;
+  opacity: 0;
+  visibility: hidden;
+
+  font-weight: bold;
+
+  background-color: beige;
+}
+
+.notification.notification-shown {
+  opacity: 1;
+  visibility: visible;
+}
