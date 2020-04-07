@@ -220,6 +220,16 @@ a:focus {
   cursor: pointer;
 }
 
+.tabs.is-centered .tablist {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tablist .tab-control-item > * {
+  pointer-events: none;
+}
+
 .hero.is-info .tabs.is-boxed button:hover,
 .hero.is-info .tabs.is-boxed button:focus {
   background-color: rgba(10,10,10,.1);

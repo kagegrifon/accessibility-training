@@ -321,32 +321,26 @@
         <p class="subtitle">We are always in touch we the outside world</p>
       </div>
     </div>
-    <div class="tabs is-boxed is-centered main-menu" id="nav">
-      <ul role="tablist">
-        <li data-target="pane-1" id="1" class="is-active">
-          <button role="tab">
-            <span class="icon is-small"><span class="fa fa-image"></span></span>
-            <span>Pictures</span>
-          </button>
-        </li>
-        <li data-target="pane-3" id="3">
-          <button role="tab">
-            <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
-            <span>Team</span>
-          </button>
-        </li>
-        <li data-target="pane-4" id="4">
-          <button role="tab">
-            <span class="icon is-small"><span class="fa fa-film"></span></span>
-            <span>Video</span>
-          </button> 
-        </li>
-      </ul>
+    <div class="tabs is-boxed is-centered main-menu" id="tab-control-container1">
+      <div role="tablist" class="tablist" aria-orientation="horizontal">
+        <button class="tab-control-item is-active" data-target="pane-1" role="tab" aria-selected="true">
+          <span class="icon is-small"><span class="fa fa-image"></span></span>
+          <span>Pictures</span>
+        </button>
+        <button class="tab-control-item" data-target="pane-3" role="tab" aria-selected="false" tabindex="-1">
+          <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
+          <span>Team</span>
+        </button>
+        <button class="tab-control-item" data-target="pane-4" role="tab" aria-selected="false" tabindex="-1">
+          <span class="icon is-small"><span class="fa fa-film"></span></span>
+          <span>Video</span>
+        </button> 
+      </div>
     </div>
   </section>
 
-  <div class="tab-content container">
-    <section class="tab-pane is-active level" id="pane-1" role="tab-panel" aria-labelledby="heading-2-item-6">
+  <div class="tab-content container" id="tab-panel-container1">
+    <section class="tab-pane is-active level" id="pane-1" role="tabpanel" aria-labelledby="heading-2-item-6">
       <h2 id="#heading-2-item-6" class="visually-hidden">Pictures</h2>
       <div class="container">
         <div class="columns features">
@@ -406,7 +400,7 @@
       </div>
     </section>
 
-    <section class="tab-pane" id="pane-3" role="tab-panel" aria-labelledby="heading-2-item-7">
+    <section class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="heading-2-item-7">
       <h2 id="#heading-2-item-7" class="visually-hidden">Team</h2>
       <div class="columns medias">
         <div class="column">
@@ -468,7 +462,7 @@
       </div>
     </section>
 
-    <section class="tab-pane" id="pane-4" role="tab-panel" aria-labelledby="heading-2-item-8">
+    <section class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="heading-2-item-8">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <h2 id="#heading-2-item-8" class="title has-text-centered">Inspired video</h2>

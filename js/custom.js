@@ -96,3 +96,107 @@ function toggleTab(selectedNav, targetId) {
 
   startNotify();
 })();
+
+(function tabHandler() {
+  var tabContolContainer = document.getElementById('tab-control-container1');
+  var tabPanelContainer = document.getElementById('tab-panel-container1');
+
+  var tabButtons = Array.from(tabContolContainer.querySelectorAll(".tab-control-item"));
+  var tabPanels = Array.from(tabPanelContainer.querySelectorAll(".tab-pane"));
+  var activeButton = null;
+
+  tabContolContainer.addEventListener('click', tabControlClickHandler);
+  tabContolContainer.addEventListener("focusin", addKeyHandler);
+  tabContolContainer.addEventListener("focusout", removeKeyHandler);
+
+  function tabControlClickHandler (event) {
+    var clickedButton = event.target.closest('.tab-control-item');
+
+    if (!clickedButton) return;
+  
+    if (!tabContolContainer.contains(clickedButton)) return;
+
+    activateTab(clickedButton);
+  }
+
+  function activateTab (button) {
+    setActiveButton(button);
+    setActivePanel(activeButton.dataset.target);
+  }
+
+  function setActiveButton(newActiveButton) {
+    if (activeButton) toggleButtonActive(activeButton, false);
+
+    activeButton = newActiveButton;
+    toggleButtonActive(activeButton, true);
+  }
+
+
+  function setActivePanel(activePanelId) {
+    tabPanels.forEach(function(tabPanel) {
+      toggleTabActive(tabPanel, tabPanel.id == activePanelId);
+    });
+  }
+  
+  function toggleButtonActive (buttonNode, isActive) {
+    buttonNode.classList.toggle("is-active", isActive);
+    buttonNode.setAttribute('aria-selected', String(isActive));
+    buttonNode.setAttribute('tabindex', isActive ? "0" : "-1");
+  }
+
+  function toggleTabActive (tabNode, isActive) {
+    tabNode.style.display = isActive ? "block" : 'none';
+  }
+
+  function addKeyHandler() {
+    tabContolContainer.addEventListener('keydown', tabKeyHandler);
+  }
+
+  function removeKeyHandler() {
+    tabContolContainer.removeEventListener('keydown', tabKeyHandler);
+  }
+
+  function tabKeyHandler(event) {
+    var curActiveIndex = tabButtons.indexOf(activeButton);
+    var getActiveButtonByKeyCode = {
+      "ArrowRight": function() { return getNextActiveButton(curActiveIndex) },
+      "ArrowLeft": function() { return getPreviousActiveButton(curActiveIndex) },
+      "Home": function() { return getFirstActiveButton() },
+      "End": function() { return getLastActiveButton() },
+    };
+
+    if (Object.keys(getActiveButtonByKeyCode).indexOf(event.code) !== -1) {
+      event.preventDefault();
+
+      var nextActiveButton = getActiveButtonByKeyCode[event.code]();
+
+      setActiveButton(nextActiveButton);
+      activeButton.focus();
+    }
+
+    function getNextActiveButton(curIndex) {
+      var nextIndex = curIndex + 1;
+      if (nextIndex === tabButtons.length) {
+        nextIndex = 0;
+      }
+      return tabButtons[nextIndex];
+    }
+
+    function getPreviousActiveButton(curIndex) {
+      var nextIndex = curIndex - 1;
+      if (nextIndex < 0) {
+        nextIndex = tabButtons.length - 1;
+      }
+      
+      return tabButtons[nextIndex];
+    }
+
+    function getFirstActiveButton() {
+      return tabButtons[0];
+    }
+
+    function getLastActiveButton() {
+      return tabButtons[tabButtons.length - 1];
+    }
+  }
+})();
