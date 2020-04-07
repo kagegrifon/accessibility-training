@@ -96,3 +96,197 @@ function toggleTab(selectedNav, targetId) {
 
   startNotify();
 })();
+
+(function tabHandler() {
+  var tabContolContainer = document.getElementById('tab-control-container1');
+  var tabPanelContainer = document.getElementById('tab-panel-container1');
+
+  var tabButtons = Array.from(tabContolContainer.querySelectorAll(".tab-control-item"));
+  var tabPanels = Array.from(tabPanelContainer.querySelectorAll(".tab-pane"));
+  var activeButton = null;
+
+  tabContolContainer.addEventListener('click', tabControlClickHandler);
+  tabContolContainer.addEventListener("focusin", addKeyHandler);
+  tabContolContainer.addEventListener("focusout", removeKeyHandler);
+
+  function tabControlClickHandler (event) {
+    var clickedButton = event.target.closest('.tab-control-item');
+
+    if (!clickedButton) return;
+  
+    if (!tabContolContainer.contains(clickedButton)) return;
+
+    activateTab(clickedButton);
+  }
+
+  function activateTab (button) {
+    setActiveButton(button);
+    setActivePanel(activeButton.dataset.target);
+  }
+
+  function setActiveButton(newActiveButton) {
+    if (activeButton) toggleButtonActive(activeButton, false);
+
+    activeButton = newActiveButton;
+    toggleButtonActive(activeButton, true);
+  }
+
+
+  function setActivePanel(activePanelId) {
+    tabPanels.forEach(function(tabPanel) {
+      toggleTabActive(tabPanel, tabPanel.id == activePanelId);
+    });
+  }
+  
+  function toggleButtonActive (buttonNode, isActive) {
+    buttonNode.classList.toggle("is-active", isActive);
+    buttonNode.setAttribute('aria-selected', String(isActive));
+    buttonNode.setAttribute('tabindex', isActive ? "0" : "-1");
+  }
+
+  function toggleTabActive (tabNode, isActive) {
+    tabNode.style.display = isActive ? "block" : 'none';
+  }
+
+  function addKeyHandler() {
+    tabContolContainer.addEventListener('keydown', tabKeyHandler);
+  }
+
+  function removeKeyHandler() {
+    tabContolContainer.removeEventListener('keydown', tabKeyHandler);
+  }
+
+  function tabKeyHandler(event) {
+    var curActiveIndex = tabButtons.indexOf(activeButton);
+    var getActiveButtonByKeyCode = {
+      "ArrowRight": function() { return getNextActiveButton(curActiveIndex) },
+      "ArrowLeft": function() { return getPreviousActiveButton(curActiveIndex) },
+      "Home": function() { return getFirstActiveButton() },
+      "End": function() { return getLastActiveButton() },
+    };
+
+    if (Object.keys(getActiveButtonByKeyCode).indexOf(event.code) !== -1) {
+      event.preventDefault();
+
+      var nextActiveButton = getActiveButtonByKeyCode[event.code]();
+
+      setActiveButton(nextActiveButton);
+      activeButton.focus();
+    }
+
+    function getNextActiveButton(curIndex) {
+      var nextIndex = curIndex + 1;
+      if (nextIndex === tabButtons.length) {
+        nextIndex = 0;
+      }
+      return tabButtons[nextIndex];
+    }
+
+    function getPreviousActiveButton(curIndex) {
+      var nextIndex = curIndex - 1;
+      if (nextIndex < 0) {
+        nextIndex = tabButtons.length - 1;
+      }
+      
+      return tabButtons[nextIndex];
+    }
+
+    function getFirstActiveButton() {
+      return tabButtons[0];
+    }
+
+    function getLastActiveButton() {
+      return tabButtons[tabButtons.length - 1];
+    }
+  }
+})();
+
+(function navMenuHandler() {
+  var navbarMenu = document.getElementById('navbarMenu');
+  var navbarItemsWithSubMenu = navbarMenu.querySelector('.navbar-item.has-sub-menu');
+  var subMenuItems = Array.from(navbarItemsWithSubMenu.querySelectorAll('.sub-menu-item'));
+
+  navbarItemsWithSubMenu.addEventListener("focusin", onFocusMenu);
+  navbarItemsWithSubMenu.addEventListener("focusout", onBlurMenu);
+
+  function onFocusMenu() {
+    navbarItemsWithSubMenu.addEventListener('keydown', navKeyHandler);
+  }
+
+  function onBlurMenu() {    
+    if (!isInnerBlur) {
+      navbarItemsWithSubMenu.removeEventListener('keydown', navKeyHandler);
+      toggleExpandSubMenu(navbarItemsWithSubMenu, false);
+      isSubMenuExpanded = false;
+    }
+    isInnerBlur = false;
+  }
+
+  var activeItem = null;
+  var isSubMenuExpanded = false;
+  var isInnerBlur = false;
+
+  function toggleExpandSubMenu(subMenu, expandFlag) {
+    subMenu.classList.toggle('expanded', expandFlag);
+    var ariaControlNode = subMenu.parentNode.querySelector('.aria-control');
+    if (ariaControlNode) {
+      ariaControlNode.setAttribute('aria-expanded', String(expandFlag));
+    }
+  }
+
+  function setActiveItem(newActiveItem) {
+    if (activeItem) toggleActiveItem(activeItem, false);
+
+    activeItem = newActiveItem;
+    toggleActiveItem(activeItem, true);
+  }
+
+  function toggleActiveItem(navItem, isActive) {
+    navItem.classList.toggle("is-active", isActive);
+    navItem.setAttribute('tabindex', isActive ? "0" : "-1");
+  }
+
+  function navKeyHandler(event) {
+    var curActiveIndex = subMenuItems.indexOf(activeItem);
+    var getActiveItemByKeyCode = {
+      "ArrowDown": () => getNextActiveElement(subMenuItems, curActiveIndex),
+      "ArrowUp": () => getPreviousActiveElement(subMenuItems, curActiveIndex),
+    };
+
+    if (Object.keys(getActiveItemByKeyCode).indexOf(event.code) !== -1) {
+      event.preventDefault();
+
+      if (!isSubMenuExpanded) {
+        toggleExpandSubMenu(navbarItemsWithSubMenu, true);
+        isSubMenuExpanded = false;
+      }
+
+      var nextActiveItem = getActiveItemByKeyCode[event.code]();
+
+      setActiveItem(nextActiveItem);
+      isInnerBlur = true;
+      nextActiveItem.focus();
+    }
+
+    function getNextActiveElement(array, curIndex) {
+      if (curIndex === -1) return array[0];
+
+      var nextIndex = curIndex + 1;
+      if (nextIndex === array.length) {
+        nextIndex = 0;
+      }
+      return array[nextIndex];
+    }
+
+    function getPreviousActiveElement(array, curIndex) {
+      if (curIndex === -1) return array[array.length - 1];
+
+      var nextIndex = curIndex - 1;
+      if (nextIndex < 0) {
+        nextIndex = array.length - 1;
+      }
+      
+      return array[nextIndex];
+    }
+  }
+})();

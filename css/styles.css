@@ -220,6 +220,16 @@ a:focus {
   cursor: pointer;
 }
 
+.tabs.is-centered .tablist {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tablist .tab-control-item > * {
+  pointer-events: none;
+}
+
 .hero.is-info .tabs.is-boxed button:hover,
 .hero.is-info .tabs.is-boxed button:focus {
   background-color: rgba(10,10,10,.1);
@@ -433,4 +443,83 @@ input:hover, input:focus,
 .notification.notification-shown {
   opacity: 1;
   visibility: visible;
+}
+
+.navbar-item.has-sub-menu {
+  position: relative;
+}
+
+.navbar-item.has-sub-menu .sub-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% - 0.75rem);
+  left: 13px;
+
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.navbar-item.has-sub-menu.expanded .sub-menu,
+.navbar-item.has-sub-menu:hover .sub-menu {
+  display: block;
+}
+
+.navbar-item.has-sub-menu [role="menuitem"], [role="separator"] {
+  background-color: #eee;
+  border: 2px solid #eee;
+}
+
+.navbar-item.has-sub-menu [role="separator"] {
+  height: 1px;
+  border: none;
+  background-color: gray;
+}
+
+.navbar-item.has-sub-menu [role="menuitem"]:hover,
+.navbar-item.has-sub-menu [role="menuitem"]:focus {
+  background-color: black;
+  color: #fff;
+  box-shadow: none;
+}
+
+.navbar-item.has-sub-menu  a[role="menuitem"] {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-item.has-sub-menu ul[role="menu"] li a {
+  display: block;
+  width: 10em;
+  padding: 5px 10px;
+}
+
+.navbar-item.has-sub-menu .aria-control {
+  padding-right: 25px;
+}
+
+.navbar-item.has-sub-menu .aria-control::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 1px);
+
+  border-right: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  box-sizing: border-box;
+  
+  transform: translateY(-50%) rotate(135deg);
+  transition: transform 0.3s;
+}
+
+.navbar-item.has-sub-menu.expanded .aria-control::before,
+.navbar-item.has-sub-menu:hover .aria-control::before {
+  transform: translateY(-50%) rotate(-45deg);
+  top: calc(50% + 2px);
+}
+
+.navbar-item.has-sub-menu .aria-control:hover::before,
+.navbar-item.has-sub-menu .aria-control:focus::before {
+  border-color: #000000;
 }
