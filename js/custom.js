@@ -200,3 +200,93 @@ function toggleTab(selectedNav, targetId) {
     }
   }
 })();
+
+(function navMenuHandler() {
+  var navbarMenu = document.getElementById('navbarMenu');
+  var navbarItemsWithSubMenu = navbarMenu.querySelector('.navbar-item.has-sub-menu');
+  var subMenuItems = Array.from(navbarItemsWithSubMenu.querySelectorAll('.sub-menu-item'));
+
+  navbarItemsWithSubMenu.addEventListener("focusin", onFocusMenu);
+  navbarItemsWithSubMenu.addEventListener("focusout", onBlurMenu);
+
+  function onFocusMenu() {
+    navbarItemsWithSubMenu.addEventListener('keydown', navKeyHandler);
+  }
+
+  function onBlurMenu() {    
+    if (!isInnerBlur) {
+      navbarItemsWithSubMenu.removeEventListener('keydown', navKeyHandler);
+      toggleExpandSubMenu(navbarItemsWithSubMenu, false);
+      isSubMenuExpanded = false;
+    }
+    isInnerBlur = false;
+  }
+
+  var activeItem = null;
+  var isSubMenuExpanded = false;
+  var isInnerBlur = false;
+
+  function toggleExpandSubMenu(subMenu, expandFlag) {
+    subMenu.classList.toggle('expanded', expandFlag);
+    var ariaControlNode = subMenu.parentNode.querySelector('.aria-control');
+    if (ariaControlNode) {
+      ariaControlNode.setAttribute('aria-expanded', String(expandFlag));
+    }
+  }
+
+  function setActiveItem(newActiveItem) {
+    if (activeItem) toggleActiveItem(activeItem, false);
+
+    activeItem = newActiveItem;
+    toggleActiveItem(activeItem, true);
+  }
+
+  function toggleActiveItem(navItem, isActive) {
+    navItem.classList.toggle("is-active", isActive);
+    navItem.setAttribute('tabindex', isActive ? "0" : "-1");
+  }
+
+  function navKeyHandler(event) {
+    var curActiveIndex = subMenuItems.indexOf(activeItem);
+    var getActiveItemByKeyCode = {
+      "ArrowDown": () => getNextActiveElement(subMenuItems, curActiveIndex),
+      "ArrowUp": () => getPreviousActiveElement(subMenuItems, curActiveIndex),
+    };
+
+    if (Object.keys(getActiveItemByKeyCode).indexOf(event.code) !== -1) {
+      event.preventDefault();
+
+      if (!isSubMenuExpanded) {
+        toggleExpandSubMenu(navbarItemsWithSubMenu, true);
+        isSubMenuExpanded = false;
+      }
+
+      var nextActiveItem = getActiveItemByKeyCode[event.code]();
+
+      setActiveItem(nextActiveItem);
+      isInnerBlur = true;
+      nextActiveItem.focus();
+    }
+
+    function getNextActiveElement(array, curIndex) {
+      if (curIndex === -1) return array[0];
+
+      var nextIndex = curIndex + 1;
+      if (nextIndex === array.length) {
+        nextIndex = 0;
+      }
+      return array[nextIndex];
+    }
+
+    function getPreviousActiveElement(array, curIndex) {
+      if (curIndex === -1) return array[array.length - 1];
+
+      var nextIndex = curIndex - 1;
+      if (nextIndex < 0) {
+        nextIndex = array.length - 1;
+      }
+      
+      return array[nextIndex];
+    }
+  }
+})();

@@ -96,13 +96,31 @@
                   <span>Home</span>
                 </a>
               </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined" tabindex="0">
+              <span class="navbar-item has-sub-menu">
+                <a class="button is-white is-outlined aria-control" aria-haspopup="true" aria-expanded="false" href="#" tabindex="0">
                   <span class="icon">
                     <span class="fab fa-superpowers"></span>
                   </span>
-                  <span>Examples</span>
+                  <span>Administration</span>
                 </a>
+                  <ul role="menu" class="sub-menu" aria-label="Administration">
+                    <li role="none">
+                      <a role="menuitem" class="sub-menu-item" href="go-somewhere.html#overview" tabindex="-1">Administration</a>
+                    </li>
+                    <li role="none">
+                      <a role="menuitem" class="sub-menu-item" href="go-somewhere.html#overview" tabindex="-1">Team Settings</a>
+                    </li>
+                    <li role="none">
+                      <a role="menuitem" class="sub-menu-item" href="go-somewhere.html#overview" tabindex="-1">Manage Your Team</a>
+                    </li>
+                    <li role="none">
+                      <a role="menuitem" class="sub-menu-item" href="go-somewhere.html#overview" tabindex="-1">Invitations</a>
+                    </li>
+                    <li role="separator" class="menu-separator"></li>
+                    <li role="none">
+                      <a role="menuitem" class="sub-menu-item" href="go-somewhere.html#overview" tabindex="-1">Authentication</a>
+                    </li>
+                  </ul>
               </span>
               <span class="navbar-item">
                 <a class="button is-white is-outlined" tabindex="0">
